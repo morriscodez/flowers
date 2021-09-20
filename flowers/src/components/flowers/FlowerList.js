@@ -7,15 +7,11 @@ export const FlowerList = () => {
 
     const { flowers, getFlowers } = useContext(FlowerContext)
 
-    console.log(flowers)
 
     useEffect(() => {    
         getFlowers()
     }, [])
     
-    useEffect(() => {
-        console.log(flowers)
-    }, [flowers])
 
     return (
         <>
