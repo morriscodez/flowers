@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React, { useState, createContext } from "react"
 
-export const FlowerContext = React.createContext()
+export const FlowerContext = createContext()
 
 export const FlowerProvider = (props) => {
     const [flowers, setFlowers] = useState([])
@@ -10,9 +10,6 @@ export const FlowerProvider = (props) => {
             .then(res => res.json())
             .then(setFlowers)
     }
-
-
-
 
 
     return (
