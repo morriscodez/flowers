@@ -12,12 +12,12 @@ export const ApplicationViews = () => {
                 <Home />
             </Route>
 
-            {/* Render the animal list when http://localhost:3000/flowers */}
+            {/* Render the animal list when http://localhost:3000/flowers
             <Route path="/flowers">
                 <FlowerProvider>
                     <FlowerList />
                 </FlowerProvider>
-            </Route>
+            </Route> */}
         </>
     )
 }

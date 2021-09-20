@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router} from "react-router-dom"
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Flower } from './components/Flower.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Flower />
+    <Router>
+      <Flower />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
