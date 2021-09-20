@@ -1,8 +1,8 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
-// import { AnimalList } from "./animal/AnimalList"
-// import { AnimalProvider } from "./animal/AnimalProvider"
+import { FlowerList } from "./flowers/FlowerList"
+import { FlowerProvider } from "./flowers/FlowerProvider"
 
 export const ApplicationViews = () => {
     return (
@@ -12,12 +12,12 @@ export const ApplicationViews = () => {
                 <Home />
             </Route>
 
-            {/* Render the animal list when http://localhost:3000/flowers
+            {/* Render the animal list when http://localhost:3000/flowers */}
             <Route path="/flowers">
                 <FlowerProvider>
                     <FlowerList />
                 </FlowerProvider>
-            </Route> */}
+            </Route>
         </>
     )
 }

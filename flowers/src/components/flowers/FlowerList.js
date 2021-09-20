@@ -1,30 +1,35 @@
 import React, { useContext, useEffect } from "react"
 import { FlowerContext } from "./FlowerProvider"
-import { useHistory } from "react-router-dom"
+import { FlowerCard } from "./FlowerCard"
 
 export const FlowerList = () => {
 
-    const history = useHistory()
 
     const { flowers, getFlowers } = useContext(FlowerContext)
 
-    useEffect(() => {
+    console.log(flowers)
+
+    useEffect(() => {    
         getFlowers()
     }, [])
+    
+    useEffect(() => {
+        console.log(flowers)
+    }, [flowers])
+
+    return (
+        <>
+            {/* Title */}
+            <div>
+                <h2> View Our Flowers </h2>
+            </div>
+    
+            {/* render flowers */}
+            <div className="flower--list">
+                {flowers.map(flower => {
+                    return <FlowerCard key={flower.id} flower={flower} />
+                })}
+            </div>
+        </>
+    )
 }
-
-return (
-    <>
-        {/* Title */}
-        <div>
-            <h2> View Our Flowers </h2>
-        </div>
-
-        {/* render flowers */}
-        <div className="flower--list">
-            {flowers.map(flower => {
-                return <FlowerCard key={flower.id} flower={flower} />
-            })}
-        </div>
-    </>
-)
